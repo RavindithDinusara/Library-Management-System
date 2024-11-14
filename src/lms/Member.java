@@ -72,116 +72,75 @@ public class Member extends javax.swing.JFrame {
 
         btnGender = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        txtname = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        rbMale = new javax.swing.JRadioButton();
+        rbFemale = new javax.swing.JRadioButton();
+        jLabel4 = new javax.swing.JLabel();
+        txttel = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtaddress = new javax.swing.JTextArea();
-        txtname = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        rbMale = new javax.swing.JRadioButton();
-        rbFemale = new javax.swing.JRadioButton();
-        txttel = new javax.swing.JTextField();
-        jPanel3 = new javax.swing.JPanel();
-        btncancel = new javax.swing.JButton();
-        btndelete = new javax.swing.JButton();
-        btnupdate = new javax.swing.JButton();
         btnadd = new javax.swing.JButton();
-        jPanel4 = new javax.swing.JPanel();
+        btnupdate = new javax.swing.JButton();
+        btndelete = new javax.swing.JButton();
+        btncancel = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblMember = new javax.swing.JTable();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("ADD NEW MEMBER");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Member Name");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 24, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Address");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 76, -1, -1));
-
-        txtaddress.setColumns(20);
-        txtaddress.setRows(5);
-        jScrollPane2.setViewportView(txtaddress);
-
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 61, 219, 55));
-        jPanel2.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 21, 219, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, -1, -1));
+        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 219, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Gender");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(418, 23, -1, -1));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Member Tel");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(418, 63, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, -1));
 
         btnGender.add(rbMale);
         rbMale.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbMale.setForeground(new java.awt.Color(255, 255, 255));
         rbMale.setText("Male");
-        jPanel2.add(rbMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 21, -1, -1));
+        jPanel1.add(rbMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, -1, -1));
 
         btnGender.add(rbFemale);
         rbFemale.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbFemale.setForeground(new java.awt.Color(255, 255, 255));
         rbFemale.setText("female");
-        jPanel2.add(rbFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(591, 21, -1, -1));
-        jPanel2.add(txttel, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 60, 181, -1));
+        jPanel1.add(rbFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 110, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 723, 130));
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Member Tel");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, -1, -1));
+        jPanel1.add(txttel, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 181, -1));
 
-        jPanel3.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Address");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, 20));
 
-        btncancel.setBackground(new java.awt.Color(51, 51, 51));
-        btncancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btncancel.setForeground(new java.awt.Color(255, 255, 255));
-        btncancel.setText("Cancel");
-        btncancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncancelActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 10, 95, 40));
+        txtaddress.setColumns(20);
+        txtaddress.setRows(5);
+        jScrollPane2.setViewportView(txtaddress);
 
-        btndelete.setBackground(new java.awt.Color(204, 0, 51));
-        btndelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btndelete.setForeground(new java.awt.Color(255, 255, 255));
-        btndelete.setText("Delete");
-        btndelete.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btndeleteActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, 94, 40));
-
-        btnupdate.setBackground(new java.awt.Color(0, 51, 204));
-        btnupdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnupdate.setForeground(new java.awt.Color(255, 255, 255));
-        btnupdate.setText("Update");
-        btnupdate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnupdateActionPerformed(evt);
-            }
-        });
-        jPanel3.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 93, 40));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 219, 55));
 
         btnadd.setBackground(new java.awt.Color(0, 102, 51));
         btnadd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -192,12 +151,40 @@ public class Member extends javax.swing.JFrame {
                 btnaddActionPerformed(evt);
             }
         });
-        jPanel3.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 96, 40));
+        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 96, 40));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 723, 61));
+        btnupdate.setBackground(new java.awt.Color(0, 51, 204));
+        btnupdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnupdate.setForeground(new java.awt.Color(255, 255, 255));
+        btnupdate.setText("Update");
+        btnupdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnupdateActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 93, 40));
 
-        jPanel4.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        btndelete.setBackground(new java.awt.Color(204, 0, 51));
+        btndelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btndelete.setForeground(new java.awt.Color(255, 255, 255));
+        btndelete.setText("Delete");
+        btndelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btndeleteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 94, 40));
+
+        btncancel.setBackground(new java.awt.Color(51, 51, 51));
+        btncancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btncancel.setForeground(new java.awt.Color(255, 255, 255));
+        btncancel.setText("Cancel");
+        btncancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncancelActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 240, 95, 40));
 
         tblMember.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -222,37 +209,9 @@ public class Member extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblMember);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 707, 156));
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 723, -1));
-
-        jPanel5.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("ADD NEW MEMBER");
-        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, -1));
-
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 60));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/home.jpg"))); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/BackGR.jpg"))); // NOI18N
         jLabel6.setText("jLabel6");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 520));
 
@@ -461,7 +420,9 @@ public class Member extends javax.swing.JFrame {
     }//GEN-LAST:event_btndeleteActionPerformed
 
     private void btncancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelActionPerformed
+        Main m = new Main();
         this.setVisible(false);
+        m.setVisible(true);
     }//GEN-LAST:event_btncancelActionPerformed
 
     public static void main(String args[]) {
@@ -484,10 +445,6 @@ public class Member extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JRadioButton rbFemale;

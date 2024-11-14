@@ -74,145 +74,92 @@ public class Return_Book extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtMID = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         lblMN = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         lblBook = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         lblReturndate = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         txtElap = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         txtFine = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
         btnadd = new javax.swing.JButton();
         btnUpdate = new javax.swing.JButton();
         btndelete = new javax.swing.JButton();
         btncancel = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblReturnBook = new javax.swing.JTable();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Return Book");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Member ID");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
 
         txtMID.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtMIDKeyPressed(evt);
             }
         });
+        jPanel1.add(txtMID, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 210, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Member Name");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Book ");
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Return date");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, -1, -1));
 
         lblMN.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblMN.setForeground(new java.awt.Color(255, 255, 255));
         lblMN.setText("___________________");
+        jPanel1.add(lblMN, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Book ");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, -1, -1));
 
         lblBook.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblBook.setForeground(new java.awt.Color(255, 255, 255));
         lblBook.setText("___________________");
+        jPanel1.add(lblBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Return date");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, -1, -1));
 
         lblReturndate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblReturndate.setForeground(new java.awt.Color(255, 255, 255));
         lblReturndate.setText("___________________");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel3)
-                .addGap(32, 32, 32)
-                .addComponent(txtMID, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5))
-                        .addGap(36, 36, 36))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblMN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblBook, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblReturndate))
-                .addContainerGap(109, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtMID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblMN)
-                        .addComponent(jLabel2)))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(lblBook))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(lblReturndate))
-                .addContainerGap())
-        );
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 799, -1));
-
-        jPanel3.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(lblReturndate, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Days Elap");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
-        jPanel3.add(txtElap, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 186, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, -1, -1));
+        jPanel1.add(txtElap, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 210, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Fine");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, -1, -1));
-        jPanel3.add(txtFine, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 170, -1));
-
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 799, 63));
-
-        jPanel4.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
+        jPanel1.add(txtFine, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 210, -1));
 
         btnadd.setBackground(new java.awt.Color(0, 102, 51));
         btnadd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -223,7 +170,7 @@ public class Return_Book extends javax.swing.JFrame {
                 btnaddActionPerformed(evt);
             }
         });
-        jPanel4.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 97, 43));
+        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 97, 43));
 
         btnUpdate.setBackground(new java.awt.Color(0, 51, 204));
         btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -234,7 +181,7 @@ public class Return_Book extends javax.swing.JFrame {
                 btnUpdateActionPerformed(evt);
             }
         });
-        jPanel4.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, 98, 43));
+        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 98, 43));
 
         btndelete.setBackground(new java.awt.Color(204, 0, 0));
         btndelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -245,7 +192,7 @@ public class Return_Book extends javax.swing.JFrame {
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel4.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 92, 43));
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 360, 92, 43));
 
         btncancel.setBackground(new java.awt.Color(51, 51, 51));
         btncancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -256,12 +203,7 @@ public class Return_Book extends javax.swing.JFrame {
                 btncancelActionPerformed(evt);
             }
         });
-        jPanel4.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 88, 43));
-
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 800, 80));
-
-        jPanel5.setBackground(new java.awt.Color(0, 51, 51));
-        jPanel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 360, 88, 43));
 
         tblReturnBook.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -286,55 +228,13 @@ public class Return_Book extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblReturnBook);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 783, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 450, 783, 151));
 
-        jPanel1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 799, 210));
-
-        jPanel6.setBackground(new java.awt.Color(0, 51, 51));
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Return Book");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(318, 318, 318)
-                .addComponent(jLabel1)
-                .addContainerGap(337, Short.MAX_VALUE))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addContainerGap())
-        );
-
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 880, 60));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/home.jpg"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/BackGR.jpg"))); // NOI18N
         jLabel8.setText("jLabel8");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 880, 610));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(-30, 0, 930, 620));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(3, -10, 880, 620));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-17, -10, 900, 620));
 
         pack();
         setLocationRelativeTo(null);
@@ -466,7 +366,9 @@ public class Return_Book extends javax.swing.JFrame {
     }//GEN-LAST:event_btndeleteActionPerformed
 
     private void btncancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelActionPerformed
+        Main m = new Main();
         this.setVisible(false);
+        m.setVisible(true);
     }//GEN-LAST:event_btncancelActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
@@ -610,11 +512,6 @@ public class Return_Book extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblBook;
     private javax.swing.JLabel lblMN;

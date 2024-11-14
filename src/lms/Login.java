@@ -19,9 +19,10 @@ public class Login extends javax.swing.JFrame {
         txtpassword = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 51, 51));
@@ -31,13 +32,13 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("User Name");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
-        jPanel1.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 220, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
+        jPanel1.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 220, -1));
 
         btnlogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnlogin.setText("Login");
@@ -46,7 +47,7 @@ public class Login extends javax.swing.JFrame {
                 btnloginActionPerformed(evt);
             }
         });
-        jPanel1.add(btnlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 100, 40));
+        jPanel1.add(btnlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, 100, 40));
 
         btncancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btncancel.setText("Cancel");
@@ -55,23 +56,22 @@ public class Login extends javax.swing.JFrame {
                 btncancelActionPerformed(evt);
             }
         });
-        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 310, 100, 40));
-        jPanel1.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 220, -1));
+        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, 100, 40));
+        jPanel1.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 220, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Login");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, -1, -1));
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 0, -1, 540));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/LOGIN.jpeg"))); // NOI18N
-        jLabel5.setText("jLabel5");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, -64, 400, 600));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/BackGR.jpg"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 470));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 390, 540));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 470));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 470));
 
         pack();
         setLocationRelativeTo(null);
@@ -119,7 +119,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField txtpassword;
