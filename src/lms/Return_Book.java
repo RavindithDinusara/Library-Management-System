@@ -112,99 +112,110 @@ public class Return_Book extends javax.swing.JFrame {
         jLabel3.setText("Member ID");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
 
+        txtMID.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         txtMID.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtMIDKeyPressed(evt);
             }
         });
-        jPanel1.add(txtMID, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 210, -1));
+        jPanel1.add(txtMID, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 220, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Member Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 110, -1, -1));
+        jLabel2.setText("Member Name :");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
         lblMN.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblMN.setForeground(new java.awt.Color(255, 255, 255));
         lblMN.setText("___________________");
-        jPanel1.add(lblMN, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, -1, -1));
+        jPanel1.add(lblMN, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Book ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, -1, -1));
+        jLabel5.setText("Book                 :");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, -1, -1));
 
         lblBook.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblBook.setForeground(new java.awt.Color(255, 255, 255));
         lblBook.setText("___________________");
-        jPanel1.add(lblBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 150, -1, -1));
+        jPanel1.add(lblBook, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Return date");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 190, -1, -1));
+        jLabel6.setText("Return date     :");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
 
         lblReturndate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         lblReturndate.setForeground(new java.awt.Color(255, 255, 255));
         lblReturndate.setText("___________________");
-        jPanel1.add(lblReturndate, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, -1, -1));
+        jPanel1.add(lblReturndate, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Days Elap");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, -1, -1));
-        jPanel1.add(txtElap, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 210, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, -1, -1));
+
+        txtElap.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(txtElap, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, 220, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Fine");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
-        jPanel1.add(txtFine, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 210, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 360, -1, -1));
+
+        txtFine.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(txtFine, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 220, -1));
 
         btnadd.setBackground(new java.awt.Color(0, 102, 51));
         btnadd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnadd.setForeground(new java.awt.Color(255, 255, 255));
         btnadd.setText("Return");
+        btnadd.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnadd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnaddActionPerformed(evt);
             }
         });
-        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 97, 43));
+        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, 210, 40));
 
         btnUpdate.setBackground(new java.awt.Color(0, 51, 204));
         btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
         btnUpdate.setText("Update");
+        btnUpdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
-        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, 98, 43));
+        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 200, 210, 40));
 
         btndelete.setBackground(new java.awt.Color(204, 0, 0));
         btndelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btndelete.setForeground(new java.awt.Color(255, 255, 255));
         btndelete.setText("Delete");
+        btndelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 360, 92, 43));
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 260, 210, 40));
 
         btncancel.setBackground(new java.awt.Color(51, 51, 51));
         btncancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btncancel.setForeground(new java.awt.Color(255, 255, 255));
         btncancel.setText("Cancel");
+        btncancel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btncancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncancelActionPerformed(evt);
             }
         });
-        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 360, 88, 43));
+        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, 210, 40));
 
+        tblReturnBook.setBackground(new java.awt.Color(0, 0, 0));
+        tblReturnBook.setForeground(new java.awt.Color(255, 255, 255));
         tblReturnBook.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -221,6 +232,9 @@ public class Return_Book extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        tblReturnBook.setGridColor(new java.awt.Color(255, 255, 255));
+        tblReturnBook.setSelectionForeground(new java.awt.Color(0, 153, 255));
+        tblReturnBook.setShowGrid(true);
         tblReturnBook.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblReturnBookMouseClicked(evt);
@@ -296,8 +310,7 @@ public class Return_Book extends javax.swing.JFrame {
     }//GEN-LAST:event_btnaddActionPerformed
 
     private void tblReturnBookMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblReturnBookMouseClicked
-        
-        DefaultTableModel d1=(DefaultTableModel)tblReturnBook.getModel();
+          DefaultTableModel d1=(DefaultTableModel)tblReturnBook.getModel();
         int selectIndex=tblReturnBook.getSelectedRow();
         
         int id=Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
@@ -310,131 +323,13 @@ public class Return_Book extends javax.swing.JFrame {
         txtFine.setText(d1.getValueAt(selectIndex, 6).toString());
        
         btnadd.setEnabled(false);
-  
     }//GEN-LAST:event_tblReturnBookMouseClicked
-
-    private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
-        
-    DefaultTableModel tableModel = (DefaultTableModel) tblReturnBook.getModel();
-    int selectedIndex = tblReturnBook.getSelectedRow();
-
-    if (selectedIndex == -1) 
-    {
-        JOptionPane.showMessageDialog(this, "Please select a return record to delete", "No Selection", JOptionPane.WARNING_MESSAGE);
-        return;
-    }
-
-    int id = Integer.parseInt(tableModel.getValueAt(selectedIndex, 0).toString());
-
-    int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this return record?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
-    if (confirm != JOptionPane.YES_OPTION) 
-    {
-        return;
-    }
-
-    try 
-    {
-        pst = con.prepareStatement("DELETE FROM returnbook WHERE id = ?");
-        pst.setInt(1, id);
-
-        int result = pst.executeUpdate();
-
-        if (result == 1) 
-        {
-            JOptionPane.showMessageDialog(this, "Return record deleted successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
-
-            txtMID.setText("");
-            lblMN.setText("");
-            lblBook.setText("");
-            lblReturndate.setText("");
-            txtElap.setText("");
-            txtFine.setText(""); 
-
-            txtMID.requestFocus();
-            ReturnBook_Load();
-            btnadd.setEnabled(true);
-        }
-        else 
-        {
-            JOptionPane.showMessageDialog(this, "Error deleting return record", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-    catch (SQLException ex)
-    {
-        JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-    }
-    }//GEN-LAST:event_btndeleteActionPerformed
 
     private void btncancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncancelActionPerformed
         Main m = new Main();
         this.setVisible(false);
         m.setVisible(true);
     }//GEN-LAST:event_btncancelActionPerformed
-
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-    
-        DefaultTableModel tableModel = (DefaultTableModel) tblReturnBook.getModel();
-    int selectedIndex = tblReturnBook.getSelectedRow();
-
-    if (selectedIndex == -1) 
-    {
-        JOptionPane.showMessageDialog(this, "Please select a return record to update", "No Selection", JOptionPane.WARNING_MESSAGE);
-        return;
-    }
-
-    int id = Integer.parseInt(tableModel.getValueAt(selectedIndex, 0).toString());
-
-    String mid = txtMID.getText().trim();
-    String membername = lblMN.getText().trim();
-    String book = lblBook.getText().trim();
-    String returndate = lblReturndate.getText().trim();
-    String elap = txtElap.getText().trim();
-    String fine = txtFine.getText().trim();
-
-    if (mid.isEmpty() || membername.isEmpty() || book.isEmpty() || returndate.isEmpty() || elap.isEmpty() || fine.isEmpty()) 
-    {
-        JOptionPane.showMessageDialog(this, "All fields must be filled out", "Validation Error", JOptionPane.ERROR_MESSAGE);
-        return;
-    }
-
-    try 
-    {
-        pst = con.prepareStatement("UPDATE returnbook SET mid = ?, mname = ?, bname = ?, returndate = ?, elp = ?, fine = ? WHERE id = ?");
-        pst.setString(1, mid);
-        pst.setString(2, membername);
-        pst.setString(3, book);
-        pst.setString(4, returndate);
-        pst.setString(5, elap);
-        pst.setString(6, fine);
-        pst.setInt(7, id);
-
-        int result = pst.executeUpdate();
-
-        if (result == 1) 
-        {
-            JOptionPane.showMessageDialog(this, "Return record updated successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
-
-            txtMID.setText("");
-            lblMN.setText("");
-            lblBook.setText("");
-            lblReturndate.setText("");
-            txtElap.setText("");
-            txtFine.setText(""); 
-            
-            txtMID.requestFocus();           
-            ReturnBook_Load();
-            btnadd.setEnabled(true);
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(this, "Error updating return record", "Error", JOptionPane.ERROR_MESSAGE);
-        }
-    }
-    catch (SQLException ex)
-    {
-        JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-    }
-    }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void txtMIDKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMIDKeyPressed
         
@@ -490,6 +385,123 @@ public class Return_Book extends javax.swing.JFrame {
         }
     }
     }//GEN-LAST:event_txtMIDKeyPressed
+
+    private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
+
+        DefaultTableModel tableModel = (DefaultTableModel) tblReturnBook.getModel();
+        int selectedIndex = tblReturnBook.getSelectedRow();
+
+        if (selectedIndex == -1)
+        {
+            JOptionPane.showMessageDialog(this, "Please select a return record to delete", "No Selection", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        int id = Integer.parseInt(tableModel.getValueAt(selectedIndex, 0).toString());
+
+        int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this return record?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
+        if (confirm != JOptionPane.YES_OPTION)
+        {
+            return;
+        }
+
+        try
+        {
+            pst = con.prepareStatement("DELETE FROM returnbook WHERE id = ?");
+            pst.setInt(1, id);
+
+            int result = pst.executeUpdate();
+
+            if (result == 1)
+            {
+                JOptionPane.showMessageDialog(this, "Return record deleted successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+                txtMID.setText("");
+                lblMN.setText("");
+                lblBook.setText("");
+                lblReturndate.setText("");
+                txtElap.setText("");
+                txtFine.setText("");
+
+                txtMID.requestFocus();
+                ReturnBook_Load();
+                btnadd.setEnabled(true);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this, "Error deleting return record", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch (SQLException ex)
+        {
+            JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btndeleteActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+
+        DefaultTableModel tableModel = (DefaultTableModel) tblReturnBook.getModel();
+        int selectedIndex = tblReturnBook.getSelectedRow();
+
+        if (selectedIndex == -1)
+        {
+            JOptionPane.showMessageDialog(this, "Please select a return record to update", "No Selection", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        int id = Integer.parseInt(tableModel.getValueAt(selectedIndex, 0).toString());
+
+        String mid = txtMID.getText().trim();
+        String membername = lblMN.getText().trim();
+        String book = lblBook.getText().trim();
+        String returndate = lblReturndate.getText().trim();
+        String elap = txtElap.getText().trim();
+        String fine = txtFine.getText().trim();
+
+        if (mid.isEmpty() || membername.isEmpty() || book.isEmpty() || returndate.isEmpty() || elap.isEmpty() || fine.isEmpty())
+        {
+            JOptionPane.showMessageDialog(this, "All fields must be filled out", "Validation Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        try
+        {
+            pst = con.prepareStatement("UPDATE returnbook SET mid = ?, mname = ?, bname = ?, returndate = ?, elp = ?, fine = ? WHERE id = ?");
+            pst.setString(1, mid);
+            pst.setString(2, membername);
+            pst.setString(3, book);
+            pst.setString(4, returndate);
+            pst.setString(5, elap);
+            pst.setString(6, fine);
+            pst.setInt(7, id);
+
+            int result = pst.executeUpdate();
+
+            if (result == 1)
+            {
+                JOptionPane.showMessageDialog(this, "Return record updated successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+                txtMID.setText("");
+                lblMN.setText("");
+                lblBook.setText("");
+                lblReturndate.setText("");
+                txtElap.setText("");
+                txtFine.setText("");
+
+                txtMID.requestFocus();
+                ReturnBook_Load();
+                btnadd.setEnabled(true);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this, "Error updating return record", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch (SQLException ex)
+        {
+            JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_btnUpdateActionPerformed
              
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {

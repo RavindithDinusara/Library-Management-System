@@ -112,6 +112,7 @@ public class Isuue_Book extends javax.swing.JFrame {
         jLabel3.setText("Member ID");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, -1, -1));
 
+        txtMID.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         txtMID.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtMIDKeyPressed(evt);
@@ -120,6 +121,7 @@ public class Isuue_Book extends javax.swing.JFrame {
         jPanel1.add(txtMID, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 163, -1));
 
         txtMN.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtMN.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         txtMN.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtMNKeyPressed(evt);
@@ -130,16 +132,18 @@ public class Isuue_Book extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Book ID");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, -1));
 
+        txtBID.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         txtBID.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtBIDKeyPressed(evt);
             }
         });
-        jPanel1.add(txtBID, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, 163, -1));
+        jPanel1.add(txtBID, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 163, -1));
 
         txtBN.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtBN.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         txtBN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBNActionPerformed(evt);
@@ -150,54 +154,63 @@ public class Isuue_Book extends javax.swing.JFrame {
                 txtBNKeyPressed(evt);
             }
         });
-        jPanel1.add(txtBN, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, 163, -1));
+        jPanel1.add(txtBN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 163, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Issue Date");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
-        jPanel1.add(DSissuedate, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 193, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
+
+        DSissuedate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(DSissuedate, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 200, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Return date");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, -1, -1));
-        jPanel1.add(DSreturndate, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 200, 179, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 100, -1));
+
+        DSreturndate.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(DSreturndate, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 200, -1));
 
         btnadd.setBackground(new java.awt.Color(0, 102, 51));
         btnadd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnadd.setForeground(new java.awt.Color(255, 255, 255));
         btnadd.setText("ISSUE");
+        btnadd.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnadd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnaddActionPerformed(evt);
             }
         });
-        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 108, 50));
+        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 100, 250, 40));
 
         btndelete.setBackground(new java.awt.Color(204, 0, 0));
         btndelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btndelete.setForeground(new java.awt.Color(255, 255, 255));
         btndelete.setText("Delete");
+        btndelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 290, 120, 50));
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 200, 250, 40));
 
         btncancel.setBackground(new java.awt.Color(51, 51, 51));
         btncancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btncancel.setForeground(new java.awt.Color(255, 255, 255));
         btncancel.setText("Cancel");
+        btncancel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btncancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncancelActionPerformed(evt);
             }
         });
-        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 290, 120, 50));
+        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 300, 250, 40));
 
+        tblIssueBook.setBackground(new java.awt.Color(0, 0, 0));
         tblIssueBook.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        tblIssueBook.setForeground(new java.awt.Color(255, 255, 255));
         tblIssueBook.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -214,6 +227,7 @@ public class Isuue_Book extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        tblIssueBook.setSelectionForeground(new java.awt.Color(0, 204, 255));
         tblIssueBook.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblIssueBookMouseClicked(evt);
@@ -221,7 +235,7 @@ public class Isuue_Book extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblIssueBook);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 734, 182));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 390, 740, 182));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/BackGR.jpg"))); // NOI18N
         jLabel5.setText("jLabel5");
@@ -294,9 +308,7 @@ public class Isuue_Book extends javax.swing.JFrame {
         
         DefaultTableModel d1=(DefaultTableModel)tblIssueBook.getModel();
         int selectIndex=tblIssueBook.getSelectedRow();
-        
         int id=Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
-     
         btnadd.setEnabled(false);
   
     }//GEN-LAST:event_tblIssueBookMouseClicked

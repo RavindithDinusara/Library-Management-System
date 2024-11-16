@@ -24,95 +24,46 @@ public class Reports extends javax.swing.JFrame {
      * Creates new form Reports
      */
     public Reports() {
-        initComponents();
-        Connect();
-        
+        initComponents();           
     }
-    Connection con;
-    PreparedStatement pst;
-    
-    
-    
-    
-    public void Connect()
-    {
-        try
-        {
-        Class.forName("com.mysql.cj.jdbc.Driver");
-        con=DriverManager.getConnection("jdbc:mysql://localhost/lms","root","");
-        }
-        catch (ClassNotFoundException ex)
-        {
-            Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, ex);
-        } 
-        catch (SQLException ex)
-        {
-            Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-    
-    public void loadreport()
-    {
-        SimpleDateFormat date_format1=new SimpleDateFormat("yyyy-MM-dd");
-        String fdate=date_format1.format(DSF.getDate());
-        SimpleDateFormat date_format2=new SimpleDateFormat("yyyy-MM-dd");
-        String tdate=date_format2.format(DST.getDate());
-        
-        HashMap a=new HashMap();
-        a.put("fromd",fdate);
-        a.put("tod",tdate);
-        
-        jPanel3.removeAll();
-        jPanel3.repaint();
-        jPanel3.revalidate();
-        try {
-            JasperDesign jdesign=JRXmlLoader.load("C:\\Users\\ASUS\\Desktop\\14. EAD_JAVA\\LMS\\src\\Reports\\ISSUER.jrxml");
-            JasperReport jreport=JasperCompileManager.compileReport(jdesign);
-            
-            JasperPrint jprint = JasperFillManager.fillReport(jreport,a,con);
-            
-            JRViewer v=new JRViewer(jprint);
-            jPanel3.setLayout(new BorderLayout());
-            jPanel3.add(v);
-            
-            
-        } catch (JRException ex) {
-            Logger.getLogger(Reports.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-            
-    
-
-
+ 
+               
+                    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         DSF = new com.toedter.calendar.JDateChooser();
-        jLabel4 = new javax.swing.JLabel();
         DST = new com.toedter.calendar.JDateChooser();
-        jPanel3 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
         btnGENERATE = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("FROM");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 45, -1));
 
+        DSF.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(DSF, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 170, -1));
+
+        DST.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(DST, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 110, 170, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("TO");
-
-        jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 386, Short.MAX_VALUE)
-        );
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 27, -1));
 
         btnGENERATE.setText("GENERATE");
         btnGENERATE.addActionListener(new java.awt.event.ActionListener() {
@@ -120,52 +71,39 @@ public class Reports extends javax.swing.JFrame {
                 btnGENERATEActionPerformed(evt);
             }
         });
+        jPanel1.add(btnGENERATE, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 260, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(DSF, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(DST, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67)
-                .addComponent(btnGENERATE, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(71, Short.MAX_VALUE))
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(DST, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(DSF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel3)))
-                        .addGap(32, 32, 32))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnGENERATE, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)))
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jButton1.setText("Cancel");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, 260, 30));
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("REPORTS");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/BackGR.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, -34, 840, 710));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -1, 833, 650));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGENERATEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGENERATEActionPerformed
-         loadreport();
+         
     }//GEN-LAST:event_btnGENERATEActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Main m = new Main();
+        this.setVisible(false);
+        m.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
    
 
@@ -173,8 +111,11 @@ public class Reports extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser DSF;
     private com.toedter.calendar.JDateChooser DST;
     private javax.swing.JButton btnGENERATE;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

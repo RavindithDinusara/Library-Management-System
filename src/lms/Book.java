@@ -7,9 +7,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-public class Book extends javax.swing.JFrame {
+public class Book extends javax.swing.JFrame
+{
 
-    public Book() {
+    public Book() 
+    {
         initComponents();
         connect();
         Book_Load();
@@ -37,6 +39,18 @@ public class Book extends javax.swing.JFrame {
         
     }
     }    
+    private void clearFields() 
+    {
+    txtBname.setText("");
+    txtCategory.setText("");
+    txtAuthor.setText("");
+    txtPublisher.setText("");
+    txtcontent.setText("");
+    txtNOP.setText("");
+    txtBedition.setText("");
+    txtSearch.setText("");
+    txtBname.requestFocus();
+    }
         
     public void Book_Load()
     {
@@ -102,6 +116,7 @@ public class Book extends javax.swing.JFrame {
         btncancel = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblBook = new javax.swing.JTable();
+        txtSearch = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -119,107 +134,124 @@ public class Book extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Book Name");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
-        jPanel1.add(txtBname, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 206, -1));
+
+        txtBname.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(txtBname, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 210, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Content");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
 
+        txtcontent.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         txtcontent.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtcontentActionPerformed(evt);
             }
         });
-        jPanel1.add(txtcontent, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, 190, 40));
+        jPanel1.add(txtcontent, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 210, 40));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Category");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, -1));
-        jPanel1.add(txtCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 206, -1));
+
+        txtCategory.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(txtCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 150, 210, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Book Edition");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 340, -1, -1));
 
+        txtNOP.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         txtNOP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNOPActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNOP, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 160, 190, -1));
+        jPanel1.add(txtNOP, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 210, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Author");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, -1, -1));
-        jPanel1.add(txtAuthor, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 206, -1));
+
+        txtAuthor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(txtAuthor, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 210, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Publisher");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
-        jPanel1.add(txtPublisher, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 206, -1));
+
+        txtPublisher.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(txtPublisher, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 240, 210, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("No of Pages");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 100, -1));
 
+        txtBedition.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         txtBedition.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtBeditionActionPerformed(evt);
             }
         });
-        jPanel1.add(txtBedition, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 210, 190, -1));
+        jPanel1.add(txtBedition, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 210, -1));
 
         btnadd.setBackground(new java.awt.Color(0, 102, 51));
         btnadd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnadd.setForeground(new java.awt.Color(255, 255, 255));
         btnadd.setText("Add");
+        btnadd.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnadd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnaddActionPerformed(evt);
             }
         });
-        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 105, 39));
+        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 250, 39));
 
         btnUpdate.setBackground(new java.awt.Color(0, 51, 204));
         btnUpdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
         btnUpdate.setText("Update");
+        btnUpdate.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateActionPerformed(evt);
             }
         });
-        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 340, 108, 39));
+        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 250, 39));
 
         btndelete.setBackground(new java.awt.Color(204, 0, 51));
         btndelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btndelete.setForeground(new java.awt.Color(255, 255, 255));
         btndelete.setText("Delete");
+        btndelete.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btndelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 100, 39));
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 290, 250, 40));
 
         btncancel.setBackground(new java.awt.Color(51, 51, 51));
         btncancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btncancel.setForeground(new java.awt.Color(255, 255, 255));
         btncancel.setText("Cancel");
+        btncancel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btncancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncancelActionPerformed(evt);
             }
         });
-        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 340, 99, 39));
+        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 350, 250, 39));
 
+        tblBook.setBackground(new java.awt.Color(0, 0, 0));
         tblBook.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        tblBook.setForeground(new java.awt.Color(255, 255, 255));
         tblBook.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -236,6 +268,7 @@ public class Book extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        tblBook.setSelectionForeground(new java.awt.Color(0, 204, 255));
         tblBook.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblBookMouseClicked(evt);
@@ -243,7 +276,15 @@ public class Book extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblBook);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 742, 170));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 742, 170));
+
+        txtSearch.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), "Search Book", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        txtSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSearchActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, 250, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/BackGR.jpg"))); // NOI18N
         jLabel9.setText("jLabel9");
@@ -308,16 +349,11 @@ public class Book extends javax.swing.JFrame {
 
         int i = pst.executeUpdate();
 
-        if (i == 1) {
+        if (i == 1) 
+        {
             JOptionPane.showMessageDialog(this, "Book Added Successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
 
-            txtBname.setText("");
-            txtCategory.setText("");
-            txtAuthor.setText("");
-            txtPublisher.setText("");            
-            txtcontent.setText("");
-            txtNOP.setText("");
-            txtBedition.setText("");
+            clearFields();
             Book_Load();
         } 
         else 
@@ -333,39 +369,22 @@ public class Book extends javax.swing.JFrame {
     }//GEN-LAST:event_btnaddActionPerformed
 
     private void tblBookMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblBookMouseClicked
-        
-        DefaultTableModel d1=(DefaultTableModel)tblBook.getModel();
-        int selectIndex=tblBook.getSelectedRow();
-        
-        int id=Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
-        
-        txtBname.setText(d1.getValueAt(selectIndex, 1).toString());
-        txtCategory.setText(d1.getValueAt(selectIndex, 2).toString());
-        txtAuthor.setText(d1.getValueAt(selectIndex, 3).toString());
-        txtPublisher.setText(d1.getValueAt(selectIndex, 4).toString());
-        txtcontent.setText(d1.getValueAt(selectIndex, 5).toString());
-        txtNOP.setText(d1.getValueAt(selectIndex, 6).toString());
-        txtBedition.setText(d1.getValueAt(selectIndex, 7).toString());
-               
-        btnadd.setEnabled(false);
+
   
     }//GEN-LAST:event_tblBookMouseClicked
 
     private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
         
-    DefaultTableModel tableModel = (DefaultTableModel) tblBook.getModel();
-    int selectedIndex = tblBook.getSelectedRow();
+    String id = txtSearch.getText().trim();
 
-    if (selectedIndex == -1) 
+    if (id.isEmpty()) 
     {
-        JOptionPane.showMessageDialog(this, "Please select a book to delete", "No Selection", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Please enter a book ID", "Validation Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
 
-    int id = Integer.parseInt(tableModel.getValueAt(selectedIndex, 0).toString());
-
     int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this book?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
-    if (confirm != JOptionPane.YES_OPTION)
+    if (confirm != JOptionPane.YES_OPTION) 
     {
         return;
     }
@@ -373,33 +392,24 @@ public class Book extends javax.swing.JFrame {
     try 
     {
         pst = con.prepareStatement("DELETE FROM book WHERE id = ?");
-        pst.setInt(1, id);
+        pst.setInt(1, Integer.parseInt(id));
 
         int result = pst.executeUpdate();
 
         if (result == 1) 
         {
             JOptionPane.showMessageDialog(this, "Book Deleted Successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
-
-            txtBname.setText("");
-            txtCategory.setText("");
-            txtAuthor.setText("");
-            txtPublisher.setText("");
-            txtcontent.setText("");
-            txtNOP.setText("");
-            txtBedition.setText("");
-            txtBname.requestFocus();
+            clearFields();
             Book_Load();
             btnadd.setEnabled(true);
-        } 
-        else 
+        } else 
         {
             JOptionPane.showMessageDialog(this, "Error deleting book", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    } catch (SQLException ex) 
+    } 
+    catch (SQLException ex) 
     {
         JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        
     }
     }//GEN-LAST:event_btndeleteActionPerformed
 
@@ -422,17 +432,7 @@ public class Book extends javax.swing.JFrame {
     }//GEN-LAST:event_txtBeditionActionPerformed
 
     private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
-        DefaultTableModel tableModel = (DefaultTableModel) tblBook.getModel();
-    int selectedIndex = tblBook.getSelectedRow();
-
-    if (selectedIndex == -1) 
-    {
-        JOptionPane.showMessageDialog(this, "Please select a book to update", "No Selection", JOptionPane.WARNING_MESSAGE);
-        return;
-    }
-
-    int id = Integer.parseInt(tableModel.getValueAt(selectedIndex, 0).toString());
-
+    String id = txtSearch.getText().trim();
     String bname = txtBname.getText().trim();
     String category = txtCategory.getText().trim();
     String author = txtAuthor.getText().trim();
@@ -441,7 +441,7 @@ public class Book extends javax.swing.JFrame {
     String no = txtNOP.getText().trim();
     String edition = txtBedition.getText().trim();
 
-    if (bname.isEmpty() || category.isEmpty() || author.isEmpty() || publisher.isEmpty() || content.isEmpty() || no.isEmpty() || edition.isEmpty())
+    if (bname.isEmpty() || category.isEmpty() || author.isEmpty() || publisher.isEmpty() || content.isEmpty() || no.isEmpty() || edition.isEmpty()) 
     {
         JOptionPane.showMessageDialog(this, "All fields must be filled out", "Validation Error", JOptionPane.ERROR_MESSAGE);
         return;
@@ -462,7 +462,8 @@ public class Book extends javax.swing.JFrame {
         return;
     }
 
-    try {
+    try 
+    {
         pst = con.prepareStatement("UPDATE book SET bname = ?, catname = ?, author = ?, publisher = ?, content = ?, pages = ?, edition = ? WHERE id = ?");
         pst.setString(1, bname);
         pst.setString(2, category);
@@ -471,22 +472,14 @@ public class Book extends javax.swing.JFrame {
         pst.setString(5, content);
         pst.setInt(6, Integer.parseInt(no));
         pst.setString(7, edition);
-        pst.setInt(8, id);
+        pst.setInt(8, Integer.parseInt(id));
 
         int result = pst.executeUpdate();
 
-        if (result == 1) 
+        if (result == 1)
         {
             JOptionPane.showMessageDialog(this, "Book Updated Successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
-
-            txtBname.setText("");
-            txtCategory.setText("");
-            txtAuthor.setText("");
-            txtPublisher.setText("");
-            txtcontent.setText("");
-            txtNOP.setText("");
-            txtBedition.setText("");
-            txtBname.requestFocus();           
+            clearFields();
             Book_Load();
             btnadd.setEnabled(true);
         } 
@@ -498,9 +491,51 @@ public class Book extends javax.swing.JFrame {
     catch (SQLException ex) 
     {
         JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        
     }
+    
     }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
+    
+    String id = txtSearch.getText().trim();
+
+    if (id.isEmpty()) 
+    {
+        JOptionPane.showMessageDialog(this, "Please enter a book ID", "Validation Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    try 
+    {
+        int bookId = Integer.parseInt(id);
+        pst = con.prepareStatement("SELECT * FROM book WHERE id = ?");
+        pst.setInt(1, bookId);
+        rs = pst.executeQuery();
+
+        if (rs.next())
+        {
+            txtBname.setText(rs.getString("bname"));
+            txtCategory.setText(rs.getString("catname"));
+            txtAuthor.setText(rs.getString("author"));
+            txtPublisher.setText(rs.getString("publisher"));
+            txtcontent.setText(rs.getString("content"));
+            txtNOP.setText(rs.getString("pages"));
+            txtBedition.setText(rs.getString("edition"));
+            btnadd.setEnabled(false); // Disable add button to prevent adding duplicate entries
+        }
+        else 
+        {
+            JOptionPane.showMessageDialog(this, "Book not found", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    } 
+    catch (NumberFormatException e) 
+    {
+        JOptionPane.showMessageDialog(this, "Invalid book ID", "Validation Error", JOptionPane.ERROR_MESSAGE);
+    } catch (SQLException ex) 
+    {
+        JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_txtSearchActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -532,6 +567,7 @@ public class Book extends javax.swing.JFrame {
     private javax.swing.JTextField txtCategory;
     private javax.swing.JTextField txtNOP;
     private javax.swing.JTextField txtPublisher;
+    private javax.swing.JTextField txtSearch;
     private javax.swing.JTextField txtcontent;
     // End of variables declaration//GEN-END:variables
 }

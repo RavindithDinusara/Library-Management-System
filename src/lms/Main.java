@@ -41,6 +41,7 @@ public class Main extends javax.swing.JFrame {
         btn_book.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_book.setForeground(new java.awt.Color(255, 255, 255));
         btn_book.setText("ADD BOOK");
+        btn_book.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_book.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_bookActionPerformed(evt);
@@ -59,6 +60,7 @@ public class Main extends javax.swing.JFrame {
         btn_member.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_member.setForeground(new java.awt.Color(255, 255, 255));
         btn_member.setText("ADD MEMBER");
+        btn_member.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_member.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_memberActionPerformed(evt);
@@ -77,6 +79,7 @@ public class Main extends javax.swing.JFrame {
         btn_report.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_report.setForeground(new java.awt.Color(255, 255, 255));
         btn_report.setText("REPORTS");
+        btn_report.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_report.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_reportActionPerformed(evt);
@@ -95,6 +98,7 @@ public class Main extends javax.swing.JFrame {
         btn_return_book.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_return_book.setForeground(new java.awt.Color(255, 255, 255));
         btn_return_book.setText("RETURN BOOK");
+        btn_return_book.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_return_book.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_return_bookActionPerformed(evt);
@@ -106,6 +110,7 @@ public class Main extends javax.swing.JFrame {
         btn_issue_book.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_issue_book.setForeground(new java.awt.Color(255, 255, 255));
         btn_issue_book.setText("ISSUE BOOK");
+        btn_issue_book.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_issue_book.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_issue_bookActionPerformed(evt);
@@ -119,6 +124,7 @@ public class Main extends javax.swing.JFrame {
         btn_logout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btn_logout.setForeground(new java.awt.Color(255, 255, 255));
         btn_logout.setText("LOGOUT");
+        btn_logout.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btn_logout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_logoutActionPerformed(evt);
@@ -129,8 +135,8 @@ public class Main extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("WELCOME TO LIBRARY");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 20, -1, -1));
+        jLabel1.setText("WELCOME TO LIBRARY MANAGEMENT SYSTEM");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, -1, -1));
 
         jLabel2.setBackground(new java.awt.Color(0, 51, 51));
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/BackGR.jpg"))); // NOI18N

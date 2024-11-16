@@ -33,7 +33,16 @@ public class Member extends javax.swing.JFrame {
     {
         JOptionPane.showMessageDialog(null, "Database Connection Failed: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
-    }   
+    } 
+    private void clearFields()
+    {
+    txtname.setText("");
+    txtaddress.setText("");
+    txttel.setText("");
+    btnGender.clearSelection();
+    txtSearch.setText("");
+    txtname.requestFocus();
+    }
     public void Member_Load()
     {
         int columnCount;
@@ -89,6 +98,7 @@ public class Member extends javax.swing.JFrame {
         btncancel = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblMember = new javax.swing.JTable();
+        txtSearch = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -105,42 +115,51 @@ public class Member extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Member Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, -1, -1));
-        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 219, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, -1, -1));
+
+        txtname.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(txtname, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 190, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Gender");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 110, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));
 
+        rbMale.setBackground(new java.awt.Color(102, 102, 102));
         btnGender.add(rbMale);
         rbMale.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbMale.setForeground(new java.awt.Color(255, 255, 255));
         rbMale.setText("Male");
-        jPanel1.add(rbMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 110, -1, -1));
+        rbMale.setBorder(null);
+        jPanel1.add(rbMale, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, -1, -1));
 
+        rbFemale.setBackground(new java.awt.Color(102, 102, 102));
         btnGender.add(rbFemale);
         rbFemale.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbFemale.setForeground(new java.awt.Color(255, 255, 255));
-        rbFemale.setText("female");
-        jPanel1.add(rbFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 110, -1, -1));
+        rbFemale.setText("Female");
+        rbFemale.setBorder(null);
+        jPanel1.add(rbFemale, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Member Tel");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 150, -1, -1));
-        jPanel1.add(txttel, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 181, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, -1, -1));
+
+        txttel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+        jPanel1.add(txttel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 190, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Address");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, 20));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, 20));
 
         txtaddress.setColumns(20);
         txtaddress.setRows(5);
+        txtaddress.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jScrollPane2.setViewportView(txtaddress);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 219, 55));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 190, 55));
 
         btnadd.setBackground(new java.awt.Color(0, 102, 51));
         btnadd.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -151,7 +170,7 @@ public class Member extends javax.swing.JFrame {
                 btnaddActionPerformed(evt);
             }
         });
-        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 96, 40));
+        jPanel1.add(btnadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 220, 30));
 
         btnupdate.setBackground(new java.awt.Color(0, 51, 204));
         btnupdate.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -162,7 +181,7 @@ public class Member extends javax.swing.JFrame {
                 btnupdateActionPerformed(evt);
             }
         });
-        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 93, 40));
+        jPanel1.add(btnupdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 220, 30));
 
         btndelete.setBackground(new java.awt.Color(204, 0, 51));
         btndelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -173,7 +192,7 @@ public class Member extends javax.swing.JFrame {
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 94, 40));
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 240, 220, 30));
 
         btncancel.setBackground(new java.awt.Color(51, 51, 51));
         btncancel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -184,8 +203,10 @@ public class Member extends javax.swing.JFrame {
                 btncancelActionPerformed(evt);
             }
         });
-        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 240, 95, 40));
+        jPanel1.add(btncancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 280, 220, 30));
 
+        tblMember.setBackground(new java.awt.Color(0, 0, 0));
+        tblMember.setForeground(new java.awt.Color(255, 255, 255));
         tblMember.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -202,6 +223,7 @@ public class Member extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        tblMember.setSelectionForeground(new java.awt.Color(0, 204, 255));
         tblMember.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblMemberMouseClicked(evt);
@@ -211,6 +233,14 @@ public class Member extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 340, 707, 156));
 
+        txtSearch.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), "Search Member", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 12))); // NOI18N
+        txtSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSearchActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 220, -1));
+
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Pictures/BackGR.jpg"))); // NOI18N
         jLabel6.setText("jLabel6");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 520));
@@ -219,7 +249,7 @@ public class Member extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 821, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,37 +315,12 @@ public class Member extends javax.swing.JFrame {
 
     private void tblMemberMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMemberMouseClicked
         
-    DefaultTableModel d1 = (DefaultTableModel) tblMember.getModel();
-    int selectIndex = tblMember.getSelectedRow();
-    
-    int id = Integer.parseInt(d1.getValueAt(selectIndex, 0).toString());
-    txtname.setText(d1.getValueAt(selectIndex, 1).toString());
-    txtaddress.setText(d1.getValueAt(selectIndex, 2).toString());
-    txttel.setText(d1.getValueAt(selectIndex, 3).toString());
-    
-    String gender = d1.getValueAt(selectIndex, 4).toString();
-    if (gender.equals("Male")) {
-        rbMale.setSelected(true);
-    } else if (gender.equals("Female")) {
-        rbFemale.setSelected(true);
-    }
-    
-    btnadd.setEnabled(false);               
+               
     }//GEN-LAST:event_tblMemberMouseClicked
 
     private void btnupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnupdateActionPerformed
                
-    DefaultTableModel tableModel = (DefaultTableModel) tblMember.getModel();
-    int selectedIndex = tblMember.getSelectedRow();
-
-    if (selectedIndex == -1) 
-    {
-        JOptionPane.showMessageDialog(this, "Please select a member to update", "No Selection", JOptionPane.WARNING_MESSAGE);
-        return;
-    }
-
-    int id = Integer.parseInt(tableModel.getValueAt(selectedIndex, 0).toString());
-
+    String id = txtSearch.getText().trim();
     String name = txtname.getText().trim();
     String address = txtaddress.getText().trim();
     String telephone = txttel.getText().trim();
@@ -324,7 +329,8 @@ public class Member extends javax.swing.JFrame {
     if (rbMale.isSelected()) 
     {
         gender = "Male";
-    } else if (rbFemale.isSelected()) 
+    }
+    else if (rbFemale.isSelected())
     {
         gender = "Female";
     }
@@ -342,27 +348,22 @@ public class Member extends javax.swing.JFrame {
         pst.setString(2, address);
         pst.setString(3, telephone);
         pst.setString(4, gender);
-        pst.setInt(5, id);
+        pst.setInt(5, Integer.parseInt(id));
 
         int result = pst.executeUpdate();
 
-        if (result == 1)
+        if (result == 1) 
         {
             JOptionPane.showMessageDialog(this, "Member Updated Successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
-
-            txtname.setText("");
-            txtaddress.setText("");
-            txttel.setText("");
-            btnGender.clearSelection(); 
-            txtname.requestFocus();
-            btnadd.setEnabled(true);
+            clearFields();
             Member_Load();
-        } 
+            btnadd.setEnabled(true);
+        }
         else 
         {
             JOptionPane.showMessageDialog(this, "Error updating member", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }
+    } 
     catch (SQLException ex) 
     {
         JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
@@ -372,19 +373,16 @@ public class Member extends javax.swing.JFrame {
 
     private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
         
-    DefaultTableModel tableModel = (DefaultTableModel) tblMember.getModel();
-    int selectedIndex = tblMember.getSelectedRow();
+    String id = txtSearch.getText().trim();
 
-    if (selectedIndex == -1)
+    if (id.isEmpty())
     {
-        JOptionPane.showMessageDialog(this, "Please select a member to delete", "No Selection", JOptionPane.WARNING_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Please enter a member ID", "Validation Error", JOptionPane.ERROR_MESSAGE);
         return;
     }
 
-    int id = Integer.parseInt(tableModel.getValueAt(selectedIndex, 0).toString());
-
     int confirm = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this member?", "Confirm Deletion", JOptionPane.YES_NO_OPTION);
-    if (confirm != JOptionPane.YES_OPTION) 
+    if (confirm != JOptionPane.YES_OPTION)
     {
         return;
     }
@@ -392,23 +390,18 @@ public class Member extends javax.swing.JFrame {
     try 
     {
         pst = con.prepareStatement("DELETE FROM member WHERE id = ?");
-        pst.setInt(1, id);
+        pst.setInt(1, Integer.parseInt(id));
 
         int result = pst.executeUpdate();
 
-        if (result == 1) 
+        if (result == 1)
         {
             JOptionPane.showMessageDialog(this, "Member Deleted Successfully", "Success", JOptionPane.INFORMATION_MESSAGE);
-
-            txtname.setText("");
-            txtaddress.setText("");
-            txttel.setText("");
-            btnGender.clearSelection();
-            txtname.requestFocus();
+            clearFields();
             Member_Load();
             btnadd.setEnabled(true);
         } 
-        else
+        else 
         {
             JOptionPane.showMessageDialog(this, "Error deleting member", "Error", JOptionPane.ERROR_MESSAGE);
         }
@@ -424,6 +417,53 @@ public class Member extends javax.swing.JFrame {
         this.setVisible(false);
         m.setVisible(true);
     }//GEN-LAST:event_btncancelActionPerformed
+
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
+    
+    String id = txtSearch.getText().trim();
+
+    if (id.isEmpty())
+    {
+        JOptionPane.showMessageDialog(this, "Please enter a member ID", "Validation Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    try 
+    {
+        int memberId = Integer.parseInt(id);
+        pst = con.prepareStatement("SELECT * FROM member WHERE id = ?");
+        pst.setInt(1, memberId);
+        rs = pst.executeQuery();
+
+        if (rs.next())
+        {
+            txtname.setText(rs.getString("name"));
+            txtaddress.setText(rs.getString("address"));
+            txttel.setText(rs.getString("tel"));
+            String gender = rs.getString("gender");
+            if (gender.equals("Male")) {
+                rbMale.setSelected(true);
+            } 
+            else if (gender.equals("Female")) 
+            {
+                rbFemale.setSelected(true);
+            }
+            btnadd.setEnabled(false); // Disable add button to prevent adding duplicate entries
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this, "Member not found", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    catch (NumberFormatException e) 
+    {
+        JOptionPane.showMessageDialog(this, "Invalid member ID", "Validation Error", JOptionPane.ERROR_MESSAGE);
+    }
+    catch (SQLException ex)
+    {
+        JOptionPane.showMessageDialog(this, "Database error: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+    }//GEN-LAST:event_txtSearchActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -450,6 +490,7 @@ public class Member extends javax.swing.JFrame {
     private javax.swing.JRadioButton rbFemale;
     private javax.swing.JRadioButton rbMale;
     private javax.swing.JTable tblMember;
+    private javax.swing.JTextField txtSearch;
     private javax.swing.JTextArea txtaddress;
     private javax.swing.JTextField txtname;
     private javax.swing.JTextField txttel;
