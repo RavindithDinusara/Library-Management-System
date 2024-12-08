@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f4cbccc8-b0b3-4a7b-89d9-2b3d2d50366e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="105"/>
+	<style name="table">
+		<box>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<subDataset name="New Dataset 1" uuid="aad7e85f-7c44-41be-999f-f179194b561a">
+		<queryString language="SQL">
+			<![CDATA[SELECT 
+    i.issue_date,
+    GROUP_CONCAT(i.member_id) AS member_ids,
+    GROUP_CONCAT(m.name) AS member_names,
+    GROUP_CONCAT(m.tel) AS member_tels,
+    GROUP_CONCAT(i.book_id) AS book_ids,
+    GROUP_CONCAT(i.return_date) AS return_dates,
+    SUM(DATEDIFF(i.return_date, i.issue_date)) AS total_elapsed_days,
+    SUM(CASE 
+        WHEN DATEDIFF(i.return_date, i.issue_date) > 0 THEN DATEDIFF(i.return_date, i.issue_date) * 100
+        ELSE 0
+    END) AS total_fine
+FROM 
+    issuebook i
+JOIN 
+    member m ON i.member_id = m.id
+WHERE 
+    i.issue_date BETWEEN '2024-11-01' AND '2024-11-30'
+GROUP BY 
+    i.issue_date;]]>
+		</queryString>
+		<field name="issue_date" class="java.sql.Date">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="member_ids" class="java.lang.String"/>
+		<field name="member_names" class="java.lang.String"/>
+		<field name="member_tels" class="java.lang.String"/>
+		<field name="book_ids" class="java.lang.String"/>
+		<field name="return_dates" class="java.lang.String"/>
+		<field name="total_elapsed_days" class="java.math.BigDecimal"/>
+		<field name="total_fine" class="java.math.BigDecimal"/>
+	</subDataset>
+	<subDataset name="dataset1" uuid="cd8c535d-ca72-4be2-be84-b92c28243f12"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT 
+    i.issue_date,
+    GROUP_CONCAT(i.member_id) AS member_ids,
+    GROUP_CONCAT(m.name) AS member_names,
+    GROUP_CONCAT(m.tel) AS member_tels,
+    GROUP_CONCAT(i.book_id) AS book_ids,
+    GROUP_CONCAT(i.return_date) AS return_dates,
+    SUM(DATEDIFF(NOW(), i.return_date)) AS total_elapsed_days,
+    SUM(CASE 
+        WHEN DATEDIFF(NOW(), i.return_date) > 0 THEN DATEDIFF(NOW(), i.return_date) * 100
+        ELSE 0
+    END) AS total_fine
+FROM 
+    issuebook i
+JOIN 
+    member m ON i.member_id = m.id
+WHERE 
+    i.issue_date BETWEEN '2024-11-01' AND '2024-11-30'
+GROUP BY 
+    i.issue_date;]]>
+	</queryString>
+	<field name="issue_date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="member_ids" class="java.lang.String"/>
+	<field name="member_names" class="java.lang.String"/>
+	<field name="member_tels" class="java.lang.String"/>
+	<field name="book_ids" class="java.lang.String"/>
+	<field name="return_dates" class="java.lang.String"/>
+	<field name="total_elapsed_days" class="java.math.BigDecimal"/>
+	<field name="total_fine" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102">
+			<staticText>
+				<reportElement x="213" y="0" width="366" height="36" backcolor="#FFFFFF" uuid="8c656aee-4c9d-451d-a49b-667d2e3feabe"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Monthly Overdue Books Report]]></text>
+			</staticText>
+			<line>
+				<reportElement style="table_TH" x="0" y="89" width="802" height="1" backcolor="#000000" uuid="e83ec5dd-d66c-432e-8e5d-77cf4827ce3f"/>
+				<graphicElement>
+					<pen lineWidth="4.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="0" width="100" height="20" uuid="8872e1e1-2880-4e72-a8e5-798b0b5656a8"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[City Library]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="20" width="295" height="20" uuid="a0bfc5cf-e794-4340-894a-7e2299d172d5"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reporting Period: November 1, 2024 - November 30, 2024]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="660" y="0" width="76" height="20" uuid="aaf20aa8-4d37-48e4-aae5-b5f5e54fd939"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[City Library ,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="660" y="20" width="142" height="20" uuid="1a62e99b-e904-4d1e-83b8-5f93fc3a73b7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[NO : 33/1A Main streeet,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="659" y="40" width="142" height="20" uuid="3d85f909-e844-4a44-bc0f-c72208047f08"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Colombo 9.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="40" width="295" height="20" uuid="29bd8b6e-cda9-467a-92a8-13480b86371d"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tel : 0112347546 / 0112438256]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="32" width="100" height="20" uuid="ce76e5a3-29f6-483b-8ce3-ad5199bc6f8d"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Issue Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="32" width="76" height="20" uuid="5f473306-1dd6-443b-bb0b-f61f3db906fe"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Member ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="32" width="100" height="20" uuid="4dd71859-bafe-4ad4-b630-e956f7e87f51"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Member Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="32" width="81" height="20" uuid="9df05328-4890-4916-974f-0735e4edfdde"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Tel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="32" width="73" height="20" uuid="43f69660-8388-4407-9e7a-a924df2f49b3"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Book ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="32" width="100" height="20" uuid="e05508bb-f7b4-4f51-8e39-dedc2efce0bd"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Return Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="601" y="32" width="100" height="20" uuid="2e6dcf82-217a-406f-ae57-9a53f0be543e"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Elapsed Days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="725" y="32" width="77" height="20" uuid="95f735b7-459a-4d9a-935e-fa25b470a78d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fine Amount]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="57" width="802" height="1" uuid="0ea18d42-a77b-47ea-bc0b-4014597ae69a"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="20" width="802" height="1" uuid="c89e08c0-605c-4490-bfda-5f5952e02621"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="64" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="43" width="100" height="20" uuid="0b9b0a2c-bb5f-40a0-8817-b980db5d8e48"/>
+				<textFieldExpression><![CDATA[$F{issue_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="43" width="43" height="20" uuid="102aafc0-473b-4b9b-99cd-feed273e1a2a"/>
+				<textFieldExpression><![CDATA[$F{member_ids}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="43" width="100" height="20" uuid="7e461a5e-846e-430a-a3fb-c769670a670e"/>
+				<textFieldExpression><![CDATA[$F{member_names}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="314" y="43" width="81" height="20" uuid="e0e727eb-1c04-4bb1-a35d-80b0faeccea9"/>
+				<textFieldExpression><![CDATA[$F{member_tels}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="43" width="43" height="20" uuid="cce52add-e96d-43cb-906b-a0a187e55f45"/>
+				<textFieldExpression><![CDATA[$F{book_ids}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="43" width="100" height="20" uuid="ab99664c-eb3e-4453-80f1-fd9123093974"/>
+				<textFieldExpression><![CDATA[$F{return_dates}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="601" y="43" width="42" height="20" uuid="eaecc474-7d67-446a-bfc3-9ad2fe68e5de"/>
+				<textFieldExpression><![CDATA[$F{total_elapsed_days}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="725" y="43" width="77" height="20" uuid="58c45031-a413-40d0-ae9b-3e0999afcd24"/>
+				<textFieldExpression><![CDATA[$F{total_fine}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="62" width="802" height="1" uuid="c3e43f84-7580-4c56-a842-12a8091a8e7c"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="16" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="14" width="97" height="20" uuid="2391935d-26cb-46b9-91ef-d6c45ae02899"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Generated on: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="14" width="113" height="20" uuid="af1c61d7-d5f2-4643-ba55-6a1e37d6d542"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[November 28, 2024]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="726" y="14" width="76" height="20" uuid="804ecb21-8b25-4c90-bbf4-b97b2117a59d"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="9" width="802" height="1" uuid="243b0fcc-f780-47f0-9e6c-0b17d18539a1"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="203" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="74" width="156" height="21" uuid="9c616667-1372-4557-b826-9a04bbd2ecc1"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Total Fine                    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="42" width="156" height="21" uuid="93bc0183-b249-44f4-b037-7729d1909326"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Total overdue Books : ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="10" width="142" height="21" uuid="2edd7068-7c4f-49ec-b77b-432a73f9b324"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Executive Summary
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="43" width="100" height="20" uuid="aac8e6d2-dd3e-464e-abec-b06f04db6e8f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="75" width="100" height="20" uuid="a7e39dc4-a6e2-4656-8498-b35e3030b9b3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[2100.00]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="108" width="142" height="21" uuid="4e6147a5-d2f9-4699-9c32-26146f85141f"/>
+				<textElement>
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Notes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="150" width="122" height="21" uuid="87ac12ab-b0d8-4e13-914d-ec1ecc35eb6d"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Total Elapsed Days:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="13" y="181" width="122" height="21" uuid="c1c0d307-73b0-4c48-ba23-ea5f62ebcc38"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Total Fine                :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="151" width="229" height="20" uuid="4f6ee529-58bd-4aad-b72d-88d3928917f9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[The sum of days each book was overdue.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="181" width="356" height="20" uuid="e8b42adb-fb8c-4de2-8dc2-2189c4cf379b"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Calculated based on the overdue days, with a rate of 100 per day.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

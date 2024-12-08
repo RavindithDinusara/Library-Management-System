@@ -11,9 +11,16 @@ pages INT,edition INT);
 CREATE TABLE issuebook (id INT(10) PRIMARY KEY AUTO_INCREMENT,member_id INT(10),book_id INT(10),issue_date DATE,return_date DATE);
 
 
-SELECT issuebook.id AS issuebook_id,member.id AS member_id,member.name AS member_name,book.id AS book_id,book.bname AS book_name,issuebook.issue_date,issuebook.return_date FROM issuebook JOIN member ON issuebook.member_id = member.id JOIN book ON issuebook.book_id = book.id;
-
-
 CREATE TABLE returnbook (id INT(10) PRIMARY KEY AUTO_INCREMENT,mid INT(10),mname VARCHAR(50),bname VARCHAR(50),returndate VARCHAR(50),elp INT(10),fine INT(10));
 
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 SELECT i.id, m.name, b.bname, i.issue_date, i.return_date FROM issuebook i JOIN member m ON i.member_id = m.id JOIN book b ON i.book_id = b.id;
+
+SELECT issuebook.id AS issuebook_id,member.id AS member_id,member.name AS member_name,book.id AS book_id,book.bname AS book_name,issuebook.issue_date,issuebook.return_date FROM issuebook JOIN member ON issuebook.member_id = member.id JOIN book ON issuebook.book_id = book.id;
