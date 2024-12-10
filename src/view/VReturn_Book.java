@@ -23,7 +23,6 @@ public class VReturn_Book extends javax.swing.JFrame
         DefaultTableModel model = (DefaultTableModel) tblReturnBook.getModel();
         returnBookController.loadReturnBooks(model);
     }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

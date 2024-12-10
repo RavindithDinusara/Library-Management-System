@@ -9,7 +9,6 @@ import javax.swing.Timer;
 
 public class VMain extends javax.swing.JFrame 
 {
-
     public VMain()
     {
         setSize(947,654);

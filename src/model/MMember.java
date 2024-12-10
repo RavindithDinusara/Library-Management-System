@@ -9,6 +9,7 @@ public class MMember
 {  
     public void addMember(String name, String address, String telephone, String gender)
     {
+        
     Statement st = null;
     try
     {

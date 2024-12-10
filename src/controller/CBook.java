@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 public class CBook
 {
+   
     public void addbook(String bname, String category, String author, String publisher, String content, int no, int edition) 
     {
         MBook Maddbook = new MBook();

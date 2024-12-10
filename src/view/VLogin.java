@@ -106,7 +106,8 @@ public class VLogin extends javax.swing.JFrame {
         VMain m = new VMain();
         this.setVisible(false);
         m.setVisible(true);
-    } else 
+    } 
+    else 
     {
         JOptionPane.showMessageDialog(this, "Username or Password does not match", "Login Error", JOptionPane.ERROR_MESSAGE);
         txtusername.setText("");

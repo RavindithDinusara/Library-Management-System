@@ -7,8 +7,10 @@ import javax.swing.table.DefaultTableModel;
 
 public class MBook 
 {  
-    public void addbook(String bname, String category, String author, String publisher, String content, int no, int edition) {
-    Statement st = null;
+    public void addbook(String bname, String category, String author, String publisher, String content, int no, int edition)
+    {
+    
+        Statement st = null;
     try
     {
         st = DBConnection.createDBConnection().createStatement();

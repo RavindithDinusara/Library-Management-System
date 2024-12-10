@@ -5,7 +5,6 @@ import java.sql.*;
 public class DBConnection 
 {
     private static Connection con;
-
     public static Connection createDBConnection()
     {
         try 

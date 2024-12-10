@@ -15,8 +15,7 @@ public class VReports extends javax.swing.JFrame {
     {
         setSize(947, 654);
         initComponents();           
-    }
-                                 
+    }                              
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

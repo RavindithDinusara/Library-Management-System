@@ -8,7 +8,6 @@ import model.DBConnection;
 
 public class VBook extends javax.swing.JFrame
 {
-
     public VBook() 
     {
         setSize(947, 654);

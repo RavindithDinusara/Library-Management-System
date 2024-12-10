@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 public class CMember 
 {
+    
     public void addMember(String name, String address, String telephone, String gender)
     {
         MMember MAddMember = new MMember();

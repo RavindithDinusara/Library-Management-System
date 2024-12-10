@@ -7,7 +7,6 @@ import javax.swing.JOptionPane;
 
 public class VMember extends javax.swing.JFrame 
 {
-
     public VMember() 
     {
         setSize(947,654);

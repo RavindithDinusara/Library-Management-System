@@ -6,8 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CIssue_Book
-{
-    
+{   
     public void addIssueBook(String mid, String bookid, String issuedate, String returndate) 
     {
         MIssue_Book MAddIssueBook = new MIssue_Book();
